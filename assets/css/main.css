@@ -1647,3 +1647,17 @@ button {
 	body.is-preload #footer {
 		opacity: 0;
 	}
+
+/* Remove overlay layers placed on top of images */
+.image::before,
+.image::after {
+    display: none !important;
+    background: none !important;
+    content: none !important;
+}
+
+/* Remove any filters or transparency on the image itself */
+.image img {
+    filter: none !important;
+    opacity: 1 !important;
+}
